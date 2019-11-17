@@ -9,7 +9,7 @@ RUN pip --no-cache-dir install \
         sklearn \
         jupyter \
         ipykernel \
-		scipy \
+	scipy \
         matplotlib \
         numpy \
         pandas \
@@ -40,4 +40,5 @@ EXPOSE 8888
 VOLUME /DataRobot_ODSC
 
 # Run Jupyter Notebook
-CMD ["jupyter","--allow-root"]
+WORKDIR "/DataRobot_ODSC"
+CMD ["jupyter","DataRobot_ODSC", "--allow-root"]
